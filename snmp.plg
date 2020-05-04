@@ -163,11 +163,6 @@ echo "+=========================================================================
 chmod o+rx &workingdir;
 
 cp &usbcfgdir;/&iconfile; &workingdir;/&iconfile;
-cp &usbcfgdir;/&tempsfile; &workingdir;/&tempsfile;
-cp &usbcfgdir;/&sharefile; &workingdir;/&sharefile;
-
-chmod a+x &workingdir;/&tempsfile;
-chmod a+x &workingdir;/&sharefile;
 
 echo "Copy complete!"
 exit 0
