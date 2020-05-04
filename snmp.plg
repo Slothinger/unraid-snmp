@@ -29,13 +29,14 @@
 
 <PLUGIN  name="&name;"
          author="&author;"
-         version="&pluginVer;"
+         version="&version;"
          pluginURL="&pluginURL;"
-         support="&supportURL;"
-         min="&minOSVer;"
-         >
+         min="&minOSVer;">
 
 <CHANGES>
+###2020.04.05
+- Update Package Version         
+         
 **SNMP**
 
 ###2020.04.01
