@@ -2,16 +2,16 @@
 
 <!DOCTYPE PLUGIN [
 <!ENTITY name        "snmp">
-<!ENTITY author      "anon">
-
-<!ENTITY version     "2018.07.22">
-<!ENTITY pluginURL   "https://github.com/coppit/unraid-snmp/raw/master/snmp.plg">
+<!ENTITY author      "Slothinger">
+<!ENTITY version     "2020.05.04>
+<!ENTITY pluginURL   "https://github.com/Slothinger/unraid-snmp/raw/master/snmp.plg">
 <!ENTITY pkgversion  "5.8">
+<!ENTITY minOSVer    "6.7.0">
 <!ENTITY gitURL      "https://raw.githubusercontent.com/&author;/unraid-snmp/master">
 <!ENTITY plugdir     "/usr/local/emhttp/plugins/&name;">
 <!ENTITY pkgdir      "/boot/packages">
 <!ENTITY cfgdir      "/boot/config/plugins/&name;">
-<!ENTITY pkghost     "https://mirrors.slackware.com/slackware/slackware64-current/slackware64/n/">
+<!ENTITY pkghost     "&gitURL;/packages">
 
 <!ENTITY snmppkg     "net-snmp-&pkgversion;-x86_64-5.txz">
 <!ENTITY snmppkgmd5  "3ed1f1794ca434c3e3dcb56fa0eac51e">
