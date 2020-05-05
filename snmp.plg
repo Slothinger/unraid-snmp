@@ -27,7 +27,7 @@
 <!ENTITY iconfile    "snmp.png">
 <!ENTITY iconfilemd5 "4e527e3b03b278774f8044ca148d7e28">
 <!ENTITY tempsfile   "drive_temps.sh">
-<!ENTITY tempsmd5    "71a809c1e34dfcc99d2f375c1ca89aa5">
+<!ENTITY tempsmd5    "6180ab788f3e5adf31e105d341137a26">
 <!ENTITY sharefile   "share_free_space.sh">
 <!ENTITY sharemd5    "fc3632854f81070ade8c363e6aba2862">
 <!ENTITY community   "public">
