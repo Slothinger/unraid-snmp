@@ -98,7 +98,7 @@
 ###2015.06.24
 - Initial unRAID V6 release.
 </CHANGES>
-
+     
 <!-- Create plugin README.md file used in the Plugin Web UI-->
 <FILE Name="&workingdir;/README.md">
 <INLINE>
@@ -147,6 +147,18 @@ fi
 <MD5>&iconfilemd5;</MD5>
 </FILE>
 
+<!-- Download and cache the drive temperature script -->
+<FILE Name="&usbcfgdir;/&tempsfile;">
+<URL>&rawGitURL;/&tempsfile;</URL>
+<MD5>&tempsmd5;</MD5>
+</FILE>
+
+<!-- Download and cache the free space script -->
+<FILE Name="&usbcfgdir;/&sharefile;">
+<URL>&rawGitURL;/&sharefile;</URL>
+<MD5>&sharemd5;</MD5>
+</FILE>
+
 <!-- Copy into working directory and set executable permissions -->
 <FILE Run="/bin/bash">
 <INLINE>
@@ -163,6 +175,11 @@ echo "+=========================================================================
 chmod o+rx &workingdir;
 
 cp &usbcfgdir;/&iconfile; &workingdir;/&iconfile;
+cp &usbcfgdir;/&tempsfile; &workingdir;/&tempsfile;
+cp &usbcfgdir;/&sharefile; &workingdir;/&sharefile;
+
+chmod a+x &workingdir;/&tempsfile;
+chmod a+x &workingdir;/&sharefile;
 
 echo "Copy complete!"
 exit 0
@@ -179,6 +196,8 @@ disk /mnt/disk1
 disk /mnt/disk2
 disk /mnt/cache
 
+extend disktemp &workingdir;/&tempsfile;
+extend sharefree &workingdir;/&sharefile;
 </INLINE>
 </FILE>
 
@@ -218,6 +237,16 @@ else
   echo ""
   exit 1
 fi
+
+echo ""
+echo "Here are how drive temperatures look:"
+echo snmpwalk -v 2c localhost -c public 'NET-SNMP-EXTEND-MIB::nsExtendOutLine."disktemp"'
+snmpwalk -v 2c localhost -c public 'NET-SNMP-EXTEND-MIB::nsExtendOutLine."disktemp"'
+
+echo ""
+echo "Here is how share free space looks:"
+echo snmpwalk -v 2c localhost -c public 'NET-SNMP-EXTEND-MIB::nsExtendOutLine."sharefree"'
+snmpwalk -v 2c localhost -c public 'NET-SNMP-EXTEND-MIB::nsExtendOutLine."sharefree"'
 
 echo ""
 echo ""
