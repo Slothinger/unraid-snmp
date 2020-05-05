@@ -29,7 +29,7 @@
 <!ENTITY tempsfile   "drive_temps.sh">
 <!ENTITY tempsmd5    "6180ab788f3e5adf31e105d341137a26">
 <!ENTITY sharefile   "share_free_space.sh">
-<!ENTITY sharemd5    "fc3632854f81070ade8c363e6aba2862">
+<!ENTITY sharemd5    "a73902d9626de04eb1744e3f1c599b96">
 <!ENTITY community   "public">
 <!ENTITY location    "Here">
 <!ENTITY contact     "root@tower">
